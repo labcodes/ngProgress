@@ -22,7 +22,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: ['src/provider.js', 'src/directive.js', 'src/module.js'],
-                dest: 'build/<%= pkg.name %>.js'
+                dest: 'lib/<%= pkg.name %>.js'
             }
         },
         uglify: {
@@ -30,8 +30,8 @@ module.exports = function (grunt) {
                 banner: '/*\n<%= pkg.name %> <%= pkg.version %> - <%= pkg.description %> \n(C) 2013 - <%= pkg.author %> \nLicense: <%= pkg.license %> \nSource: <%= pkg.url %> \nDate Compiled: <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
             },
             build: {
-                src: 'build/<%= pkg.name %>.js',
-                dest: 'build/<%= pkg.name %>.min.js'
+                src: 'lib/<%= pkg.name %>.js',
+                dest: 'lib/<%= pkg.name %>.min.js'
             }
         },
         jshint: {
